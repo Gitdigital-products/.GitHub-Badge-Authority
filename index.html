@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinkerflow-AI | Cyber Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; }
+        .neon-border { border: 1px solid #ff007f; box-shadow: 0 0 10px #ff007f33; }
+        .neon-text { color: #ff007f; text-shadow: 0 0 8px #ff007f; }
+        .neon-bg { background-color: #ff007f; box-shadow: 0 0 15px #ff007f; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #ff007f; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-slate-300 h-screen flex overflow-hidden">
+
+    <aside class="w-64 border-r border-zinc-800 bg-black flex flex-col">
+        <div class="p-6 border-b border-zinc-800 flex items-center gap-2">
+            <div class="w-8 h-8 neon-bg rounded flex items-center justify-center text-black">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <span class="font-bold tracking-widest neon-text uppercase text-sm">Tinkerflow</span>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 space-y-2">
+            <p class="text-[10px] uppercase tracking-widest text-zinc-500 mb-4">History</p>
+            <button class="w-full text-left p-3 rounded-lg glass border border-zinc-800 hover:border-[#ff007f] transition group">
+                <span class="text-xs group-hover:text-[#ff007f]">Neural Network Intro</span>
+            </button>
+            <button class="w-full text-left p-3 rounded-lg hover:bg-zinc-900 transition border border-transparent">
+                <span class="text-xs text-zinc-500">Local LLM Config</span>
+            </button>
+        </div>
+        <div class="p-4 border-t border-zinc-800">
+            <button class="w-full py-2 border border-[#ff007f] rounded-md text-[10px] uppercase font-bold neon-text hover:bg-[#ff007f] hover:text-black transition">
+                New Session +
+            </button>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col relative">
+        <header class="h-16 border-b border-zinc-800 flex items-center justify-between px-8 glass">
+            <div class="flex items-center gap-4">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs font-mono uppercase tracking-widest">Tutor_Active: v1.0.0</span>
+            </div>
+            <i class="fas fa-cog text-zinc-500 hover:neon-text cursor-pointer"></i>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8 space-y-6">
+            <div class="flex gap-4">
+                <div class="w-8 h-8 rounded border border-[#ff007f] flex items-center justify-center text-[#ff007f] text-xs">AI</div>
+                <div class="bg-zinc-900/50 p-4 rounded-2xl rounded-tl-none border border-zinc-800 max-w-xl text-sm leading-relaxed">
+                    Welcome to the terminal, <span class="neon-text">RickCreator87</span>. What are we building today? I can help you connect visual nodes or explain Python logic.
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8">
+            <div class="max-w-3xl mx-auto relative">
+                <input type="text" placeholder="Command the AI..." 
+                       class="w-full bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl focus:outline-none focus:border-[#ff007f] transition text-sm pr-12">
+                <button class="absolute right-4 top-3.5 neon-text hover:scale-110 transition">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <aside class="w-72 border-l border-zinc-800 bg-black p-6 space-y-8">
+        <div>
+            <p class="text-[10px] uppercase tracking-widest text-zinc-500 mb-4">AI Engine Selection</p>
+            <div class="space-y-3">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-[#ff007f] glass cursor-pointer">
+                    <input type="radio" name="ai" checked class="accent-[#ff007f]">
+                    <span class="text-xs font-bold text-white">Llama 3 (Local)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-zinc-800 hover:border-zinc-700 cursor-pointer">
+                    <input type="radio" name="ai" class="accent-[#ff007f]">
+                    <span class="text-xs text-zinc-400">OpenAI (Cloud)</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-[10px] uppercase tracking-widest text-zinc-500 mb-4">Toolbox</p>
+            <div class="grid grid-cols-2 gap-3">
+                <button class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-[#ff007f] transition flex flex-col items-center gap-2">
+                    <i class="fas fa-code text-xs text-blue-400"></i>
+                    <span class="text-[10px] uppercase font-bold">Node Editor</span>
+                </button>
+                <button class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-[#ff007f] transition flex flex-col items-center gap-2">
+                    <i class="fas fa-terminal text-xs text-green-400"></i>
+                    <span class="text-[10px] uppercase font-bold">Console</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+</body>
+</html>
